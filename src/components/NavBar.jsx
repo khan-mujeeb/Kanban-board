@@ -4,7 +4,7 @@ import FliterBox from "./FliterBox.jsx";
 
 // Inside your NavBar component
 const NavBar = () => {
-    const [darkMode, setDarkMode] = React.useState(false);
+    const [darkMode, setDarkMode] = React.useState(true);
 
     React.useEffect(() => {
         if (darkMode) {

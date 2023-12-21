@@ -14,6 +14,8 @@ export default {
       },
       colors: {
         'text_secondary': "#5D5E60",
+        'darkNavBar': "#161B22",
+        'darkBackground': "#010409",
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

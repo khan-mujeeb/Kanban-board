@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "./components/NavBar.jsx";
-import Content from "./components/Content.jsx";
+import NavBar from "./components/navbar/NavBar.jsx";
+import Content from "./components/cards/Content.jsx";
 import callApi from "./utils/api.jsx";
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
     }, []);
 
     return (
-        <div className="h-full">
+        <div className="">
             <NavBar />
             <Content data={data.tickets}/>
         </div>

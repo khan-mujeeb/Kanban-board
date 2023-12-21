@@ -1,5 +1,4 @@
 import React from "react";
-import Dropdown from 'react-bootstrap/Dropdown';
 import DropDownItem from "./DropDownItem";
 
 function FliterBox() {
@@ -13,7 +12,7 @@ function FliterBox() {
             <button
                 id="dropdownDefaultButton"
                 onClick={toggleDropdown}
-                className="text-black dark:text-gray-300 flex gap-2 items-center transition-all duration-100 rounded-md py-1 px-1.5 border-2  cursor-pointer shadow-sm shadow-gray-300"
+                className="text-black dark:text-gray-300 flex gap-2 items-center transition-all duration-100 rounded-md py-1 px-1.5 border-2  cursor-pointer shadow-md border dark:border-gray-700"
                 type="button"
             >
                 <div className="switch-icon">

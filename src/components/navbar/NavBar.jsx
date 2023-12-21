@@ -15,7 +15,7 @@ const NavBar = () => {
     }, [darkMode]);
 
     return (
-        <div className="bg-white dark:bg-darkNavBar p-4 flex justify-between items-center">
+        <div className="bg-white dark:bg-darkNavBar p-6 flex justify-between items-center">
             {/* filter box */}
             <FliterBox />
 

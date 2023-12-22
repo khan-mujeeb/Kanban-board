@@ -1,7 +1,6 @@
 import React from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import FliterBox from "./FliterBox.jsx";
-
 // Inside your NavBar component
 const NavBar = () => {
     const [darkMode, setDarkMode] = React.useState(true);

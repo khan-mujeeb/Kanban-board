@@ -12,7 +12,7 @@ function FliterBox() {
             <button
                 id="dropdownDefaultButton"
                 onClick={toggleDropdown}
-                className="text-black dark:text-gray-300 flex gap-2 items-center transition-all duration-100 rounded-md py-1 px-1.5 border-2  cursor-pointer shadow-md border dark:border-gray-700"
+                className="text-black dark:text-gray-300 flex gap-2 items-center transition-all duration-100 rounded-md py-1 px-1.5 border-2  cursor-pointer shadow-md  dark:border-gray-700"
                 type="button"
             >
                 <div className="switch-icon">
@@ -59,8 +59,8 @@ function FliterBox() {
                     dropdownOpen ? "block" : "hidden"
                 } bg-white divide-y divide-gray-100 rounded-md shadow w-44 dark:bg-gray-700`}
             >
-                <DropDownItem name="Grouping" />
-                {/* <DropDownItem name="Ordering" /> */}
+                <DropDownItem  />
+
             </div>
         </div>
     );

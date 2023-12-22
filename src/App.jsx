@@ -14,7 +14,7 @@ function App() {
     return (
         <div className="">
             <NavBar />
-            <Content data={data.tickets}/>
+            <Content data={data.tickets} users={data.users}/>
         </div>
     );
 }

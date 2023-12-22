@@ -2,10 +2,10 @@ import { create } from "zustand";
 
 const GlobalStateStore = create((set) => ({
     ordering: "priority",
-    grouping: "priority",
+    grouping: "status",
 
     setOrder: (newOrder) => set({ ordering: newOrder }),
-    setGroup: () => set({ bears: 0 }),
+    setGroup: (newGroup) => set({ grouping: newGroup }),
 }));
 
 export default GlobalStateStore;

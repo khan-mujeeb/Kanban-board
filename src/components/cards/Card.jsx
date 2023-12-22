@@ -6,9 +6,9 @@ import { FaRegCircle } from "react-icons/fa6";
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
 import { MdCancel } from "react-icons/md";
 
-function Card({data, key}) {
+function Card({data}) {
     return (
-        <div className="p-4 flex gap-2 flex-col dark:bg-gray-900 shadow-md border dark:border-gray-700 rounded-md">
+        <div className="p-4 flex gap-1 flex-col dark:bg-gray-900 shadow-md border dark:border-gray-700 rounded-md">
             <div className="flex justify-between items-center">
                 <p className="dark:text-gray-400">{data.id}</p>
 

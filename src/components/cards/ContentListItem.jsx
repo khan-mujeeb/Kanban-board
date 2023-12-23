@@ -2,11 +2,12 @@ import React from "react";
 import CardHeader from "./CardHeader.jsx";
 import Card from "./Card.jsx";
 import GlobalStateStore from "../../store/GlobalStateStore.jsx";
-import StatusImage from "./FilterImageComponents/StatusImage.jsx";
+
 
 
 const ContentListItem = ({ data, title, id }) => {
     const temp = data;
+    const [IconData, setIconData] = React.useState([]);
     const [filteredData, setFilteredData] = React.useState(temp);
     const group = GlobalStateStore((state) => state.grouping);
     const order = GlobalStateStore((state) => state.ordering);
@@ -35,14 +36,14 @@ const ContentListItem = ({ data, title, id }) => {
     }, [group, order, temp, title, filteredData, updatedData]);
 
     return (
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 h-full">
             {/* category title */}
 
             <div className="flex flex-col gap-2">
-            <CardHeader id={id} title={title} count={filteredData?.length } data={data}/>
+            <CardHeader id={id} title={title} count={filteredData?.length } data={data} group={group} IconData={IconData} />
                 {/* card */}
                 {updatedData?.map((item, index) => (
-                    <Card data={item} key={index} TitileIcon={StatusImage}/>
+                    <Card data={item} key={index} group={group} setIconData={setIconData} />
                 ))}
             </div>
         </div>

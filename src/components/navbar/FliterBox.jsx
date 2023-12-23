@@ -15,7 +15,7 @@ function FliterBox() {
                 className="text-black dark:text-gray-300 flex gap-2 items-center transition-all duration-100 rounded-md py-1 px-1.5 border-2  cursor-pointer shadow-md  dark:border-gray-700"
                 type="button"
             >
-                <div className="switch-icon">
+                <div className="switch-icon rotate-90">
                     <svg
                         stroke="currentColor"
                         fill="currentColor"

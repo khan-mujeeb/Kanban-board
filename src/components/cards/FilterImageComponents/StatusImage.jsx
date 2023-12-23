@@ -5,7 +5,7 @@ import { FaRegCircle } from "react-icons/fa6";
 import { IoCheckmarkDoneCircle } from "react-icons/io5";
 import { MdCancel } from "react-icons/md";
 
-const StatusImage = ({data}) => {
+const StatusImage = ({data, id}) => {
     return (
         <div>
             {data?.status === "Todo" && (

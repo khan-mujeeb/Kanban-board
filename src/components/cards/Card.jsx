@@ -1,8 +1,13 @@
 import React from "react";
+import StatusImage from "./FilterImageComponents/StatusImage.jsx";
+import PriorityImage from "./FilterImageComponents/PriorityImage.jsx";
+import GlobalStateStore from "../../store/GlobalStateStore.jsx";
+import UserIcon from "./FilterImageComponents/UserIcon.jsx";
 
-
-
-function Card({data, TitileIcon}) {
+function Card({data, TitileIcon, setIconData, group, IconData}) {
+    React.useEffect(() => {
+        setIconData(data);
+    }, [data, setIconData]);
     return (
         <div className="p-4 flex gap-1 flex-col dark:bg-gray-900 shadow-md border dark:border-gray-700 rounded-md">
             <div className="flex justify-between items-center">
@@ -16,7 +21,14 @@ function Card({data, TitileIcon}) {
 
             <div className="flex gap-2">
                 {
-                    <TitileIcon data={data} />
+                    group === "priority" && (
+                        <StatusImage data={data} />
+                        )
+                    }
+                {
+                    group === "status" && (
+                        <PriorityImage id={data.priority} />
+                    )
                 }
                 <p className=" text-sm dark:text-gray-100">
                     {data.title}

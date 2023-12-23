@@ -13,7 +13,7 @@ const Content = ({ data, users}) => {
     }, [group]);
 
     return (
-        <div className="bg-lightBackground dark:bg-darkBackground p-6 h-screen">
+        <div className="bg-lightBackground dark:bg-darkBackground p-6 flex-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                 {
                     group == "priority" && (
@@ -44,7 +44,7 @@ const Content = ({ data, users}) => {
                         usersList?.map((item, index) => (
                             <ContentListItem
                                 data={data}
-                                title={item.name}
+                                title={item}
                                 key={index}
                                 id={item.id}
                             />

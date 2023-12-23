@@ -5,7 +5,7 @@ import { PiCellSignalHighLight } from "react-icons/pi";
 import { GoAlertFill } from "react-icons/go";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
-const PriorityImage = ({id}) => {
+const PriorityImage = ({id, data}) => {
     return (
             <div className="dark:text-gray-600">
                 {id === 0 && <HiOutlineDotsHorizontal />}

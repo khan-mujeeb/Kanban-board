@@ -12,9 +12,9 @@ function App() {
     }, []);
 
     return (
-        <div className="">
+        <div className="flex flex-col h-screen">
             <NavBar />
-            <Content data={data.tickets} users={data.users}/>
+            <Content className=" " data={data.tickets} users={data.users}/>
         </div>
     );
 }

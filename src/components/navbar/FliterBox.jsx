@@ -55,11 +55,11 @@ function FliterBox() {
 
             <div
                 id="dropdown"
-                className={`z-50 absolute top-16 w-80 p-5   ${
+                className={`dark:bg-darkNavBar shadow-md border dark:border-gray-700 bg-white z-50 absolute top-16 w-80 p-5   ${
                     dropdownOpen ? "block" : "hidden"
-                } bg-white divide-y divide-gray-100 rounded-md shadow w-44 dark:bg-gray-700`}
+                } bg-white divide-y divide-gray-100 rounded-md shadow w-44`}
             >
-                <DropDownItem  />
+                <DropDownItem toggleDropdown={toggleDropdown} />
 
             </div>
         </div>

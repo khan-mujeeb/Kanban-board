@@ -2,20 +2,19 @@ import React from "react";
 import CardHeader from "./CardHeader.jsx";
 import Card from "./Card.jsx";
 import GlobalStateStore from "../../store/GlobalStateStore.jsx";
+import StatusImage from "./FilterImageComponents/StatusImage.jsx";
+
 
 const ContentListItem = ({ data, title, id }) => {
     const temp = data;
-
     const [filteredData, setFilteredData] = React.useState(temp);
     const group = GlobalStateStore((state) => state.grouping);
     const order = GlobalStateStore((state) => state.ordering);
     const [updatedData, setUpdatedData] = React.useState(temp);
 
-    console.log(group);
-    console.log(order);
-    console.log(updatedData);
-
     React.useEffect(() => {
+
+
         if (group === "priority") {
             setFilteredData(temp?.filter((item) => item.priority === id));
         } else if (group === "status") {
@@ -38,12 +37,12 @@ const ContentListItem = ({ data, title, id }) => {
     return (
         <div className="flex flex-col gap-6">
             {/* category title */}
-            <CardHeader id={id} title={title} count={filteredData?.length} />
 
             <div className="flex flex-col gap-2">
+            <CardHeader id={id} title={title} count={filteredData?.length } data={data}/>
                 {/* card */}
                 {updatedData?.map((item, index) => (
-                    <Card data={item} key={index} />
+                    <Card data={item} key={index} TitileIcon={StatusImage}/>
                 ))}
             </div>
         </div>
